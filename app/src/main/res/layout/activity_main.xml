@@ -55,8 +55,23 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reason_text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/reason_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="@string/enter_reason_for_visit"
+        android:inputType="none|text"
+        android:minHeight="48dp"
+        android:padding="@dimen/small_spacing"
+        app:layout_constraintEnd_toEndOf="@+id/new_place_name"
+        app:layout_constraintStart_toStartOf="@+id/new_place_name"
         app:layout_constraintTop_toBottomOf="@+id/new_place_name" />
 
 

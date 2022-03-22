@@ -7,7 +7,7 @@ const val TAG = "PLACES_VIEW_MODEL"
 
 class PlacesViewModel: ViewModel() {
 
-    private val places = mutableListOf<Place>(Place("Amman"), Place("Minneapolis"))
+    private val places = mutableListOf<Place>(Place("Amman", "See Fam"), Place("Minneapolis", "Study"))
 
     fun getPlaces(): List<Place> {
         return places // smart cast

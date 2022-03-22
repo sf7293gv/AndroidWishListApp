@@ -20,9 +20,11 @@ class PlaceRecyclerAdapter(private val places: List<Place>, private val onListIt
     inner class ViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
         fun bind(place: Place) {
             val placeNameTextView: TextView = view.findViewById(R.id.place_name)
-            placeNameTextView.text = place.name
+            val reasonTextView: TextView = view.findViewById(R.id.visit_reason)
             val dateCreatedOnTextView: TextView = view.findViewById(R.id.date_place_added)
             val createdOnText = view.context.getString(R.string.created_on, place.formattedDate())
+            placeNameTextView.text = place.name
+            reasonTextView.text = place.reason
             dateCreatedOnTextView.text = createdOnText
             val mapIcon: ImageView = view.findViewById(R.id.map_icon)
             mapIcon.setOnClickListener {
